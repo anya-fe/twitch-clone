@@ -17,11 +17,15 @@ const App = () => {
 
   const authToken = cookies.AuthToken;
 
-  useEffect(async () => {
-    if (authToken) {
-      const { users } = await client.queryUsers({ role: "user" });
-      setUsers(users);
+  useEffect(() => {
+    async function authUser() {
+      if (authToken) {
+        const { users } = await client.queryUsers({ role: "user" });
+        setUsers(users);
+      }
+
     }
+    authUser();
   }, []);
 
   const setupClient = async () => {
@@ -54,7 +58,7 @@ const App = () => {
         <Chat client={client} darkMode={true}>
           <Channel channel={channel}>
             <Video />
-            <MessagingContainer users={users}/>
+            <MessagingContainer users={users} />
             <Thread />
           </Channel>
         </Chat>

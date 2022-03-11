@@ -23,10 +23,9 @@ const App = () => {
         const { users } = await client.queryUsers({ role: "user" });
         setUsers(users);
       }
-
     }
     authUser();
-  }, []);
+  }, [authToken]);
 
   const setupClient = async () => {
     try {

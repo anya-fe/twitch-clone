@@ -3,6 +3,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 
 const Auth = () => {
+  // eslint-disable-next-line no-unused-vars
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUserName] = useState(null);

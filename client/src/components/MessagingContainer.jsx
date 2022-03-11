@@ -11,6 +11,7 @@ import { FaUsers, FaArrowAltCircleLeft } from "react-icons/fa";
 import { useState } from "react";
 
 const MessangingContainer = ({ users }) => {
+  // eslint-disable-next-line no-unused-vars
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [userListVisible, setUserListVisible] = useState(false);
 

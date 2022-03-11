@@ -5,7 +5,7 @@ const UserList = ({ users }) => {
     <div className="userlist-container">
       {users?.map((user) => (
         <li key={user.id}>
-          {user.role == "user" ? <FaHorseHead /> : <FaSmile />}
+          {user.role === "user" ? <FaHorseHead /> : <FaSmile />}
           <p>{user.name}</p>
         </li>
       ))}

@@ -10,6 +10,7 @@ import "stream-chat-css/dist/css/index.css";
 const client = StreamChat.getInstance("h96atgyage7k");
 
 const App = () => {
+  // eslint-disable-next-line no-unused-vars
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const [channel, setChannel] = useState(null);
   const [users, setUsers] = useState(null);
